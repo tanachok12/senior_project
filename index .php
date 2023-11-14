@@ -254,7 +254,7 @@ label[for="rmb"] {
     <p>At present, due to problems caused by the impact of PM 2.5 There are a lot of them and the technology for measuring dust has quite some limitations, such as Most dust meters are permanently installed, and looking at dust data in other web applications will show only the overall data, which is difficult to determine, would it be better if there was a web application platform that could check the value and easier to  move the dust measure device around, so that is reason why want to have developed Dust Detector Activity, Dust Detector Activity  is dust detector platform that can measure dust in a specific area, Dust Detector Activity consists of Dust Detector Activity portable mobile IOT device and Dust Detector web application</p>
     <div style="display: flex; justify-content: space-between; margin-top: 15px;">
       <button onclick="showSecondPopup()">Next</button>
-      <a href="https://dustdetector.net/video.php" target="_blank">
+      <a href="video.php">
         <button style="margin-left: 15px;">Go to Video Demo</button>
       </a>
     </div>
