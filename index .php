@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+     <html lang="en">
+
 <head>
     <script>
     // Function to show the pop-up
@@ -26,7 +28,8 @@
       secondPopup.style.display = "none";
     }
   </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
   body {
    font-family: Arial, Helvetica, sans-serif;
@@ -38,8 +41,8 @@
 background-repeat: no-repeat; 
   }
 
- .modal-content {
-  background-color: #fff;
+  .modal-content {
+            background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,10 +50,11 @@ background-repeat: no-repeat;
   padding: 12px 20px;
   margin: 8px 0;
   border-radius: 10px; /* เพิ่มเส้นโค้งมุมของ .modal-content */
-}
+        }
 
-.popup-container {
-  position: fixed;
+
+        .popup-container {
+    position: fixed;
   bottom: 40px;
   right: 40px;
   width: 300px;
@@ -64,9 +68,10 @@ background-repeat: no-repeat;
   display: none;
 }
 
+
 /* Style for the popup trigger button */
 .popup-trigger {
-  position: fixed;
+              position: fixed;
   bottom: 20px;
   right: 20px;
   width: 60px;
@@ -82,7 +87,7 @@ background-repeat: no-repeat;
   align-items: center;
   justify-content: center;
   clip-path: circle(50%); /* ใช้ clip-path เพื่อทำมุมที่ไม่แหลม */
-}
+        }
 
 .container {
   display: flex;
@@ -157,7 +162,7 @@ background-repeat: no-repeat;
   opacity: 0.8;
 }
 
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
   .container {
     padding: 20px;
   }
@@ -209,16 +214,14 @@ label[for="rmb"] {
     }
 
     .popup .modal-content {
-      background-color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 1000px;
-            height: 500px;
-
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90vw; /* Use relative units for width */
+            padding: 5vw; /* Use relative units for padding */
+            margin: 4vw 0; /* Use relative units for margin */
+            border-radius: 10px;
     }
 
     .popup p {
@@ -249,7 +252,7 @@ label[for="rmb"] {
 
 <div id="firstPopup" class="popup">
   <div class="modal-content">
-    <h1>What is Dust detector activity</h1>
+    <h1>What is Dust Detector Activity</h1>
     <p>ในปัจจุบันเนื่องจากปัญหาที่เกิดจากผลกระทบของ PM 2.5 มีมากมาย และเทคโนโลยีการตรวจวัดฝุ่นก็มีข้อจำกัดค่อนข้างมาก เช่น เครื่องวัดฝุ่นส่วนใหญ่ติดตั้งถาวร และการดูข้อมูลฝุ่นในเว็บแอปพลิเคชันอื่นๆ จะแสดงผล เฉพาะข้อมูลโดยรวมที่ยากต่อการระบุ จะดีกว่าไหม ถ้ามี Web Application Platform ที่สามารถตรวจสอบค่าได้และเคลื่อนย้ายเครื่องตรวจวัดฝุ่นได้ง่ายกว่า จึงเป็นสาเหตุว่าทำไมจึงต้องการพัฒนา Dust Detector Activity เป็นแพลตฟอร์มตรวจจับฝุ่นที่สามารถตรวจวัดฝุ่นได้ในพื้นที่เฉพาะ เราจคงทำเครื่องตรวจจับฝุ่น อุปกรณ์ IOT แบบพกพา และเว็บแอปพลิเคชันเครื่องตรวจค่าฝุ่น</p>
     <p>At present, due to problems caused by the impact of PM 2.5 There are a lot of them and the technology for measuring dust has quite some limitations, such as Most dust meters are permanently installed, and looking at dust data in other web applications will show only the overall data, which is difficult to determine, would it be better if there was a web application platform that could check the value and easier to  move the dust measure device around, so that is reason why want to have developed Dust Detector Activity, Dust Detector Activity  is dust detector platform that can measure dust in a specific area, Dust Detector Activity consists of Dust Detector Activity portable mobile IOT device and Dust Detector web application</p>
     <div style="display: flex; justify-content: space-between; margin-top: 15px;">
@@ -276,9 +279,9 @@ label[for="rmb"] {
     <button onclick="hidePopups()">Close</button>
   </div>
 </div>
-<a href="feedback.php" class="popup-trigger" style="bottom: 20px; right: 100px; background-color: #4CAF50; display: flex; align-items: center; justify-content: center;">
-  <span style="font-size: 14px; margin: 0; text-align: center;">Feed back</span>
-</a>
+<!--<a href="feedback.php" class="popup-trigger" style="bottom: 20px; right: 100px; background-color: #4CAF50; display: flex; align-items: center; justify-content: center;">-->
+<!--  <span style="font-size: 14px; margin: 0; text-align: center;">Feed back</span>-->
+<!--</a>-->
 
 <div class="container" style="padding-top:100px">
   
