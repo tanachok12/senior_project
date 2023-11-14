@@ -1,18 +1,41 @@
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
+    <script>
+    // Function to show the pop-up
+     function showFirstPopup() {
+      var firstPopup = document.getElementById("firstPopup");
+      firstPopup.style.display = "block";
+    }
+
+    // Function to hide the first pop-up and show the second pop-up
+    function showSecondPopup() {
+      var firstPopup = document.getElementById("firstPopup");
+      firstPopup.style.display = "none";
+
+      var secondPopup = document.getElementById("secondPopup");
+      secondPopup.style.display = "block";
+    }
+
+    // Function to hide both pop-ups
+    function hidePopups() {
+      var firstPopup = document.getElementById("firstPopup");
+      firstPopup.style.display = "none";
+
+      var secondPopup = document.getElementById("secondPopup");
+      secondPopup.style.display = "none";
+    }
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
   body {
-    font-family: Arial, Helvetica, sans-serif;
+   font-family: Arial, Helvetica, sans-serif;
+      background-size: cover;
+        background-size: cover;
+    background-color: #ddd; 
+    background-image: url('/379508396_623367619972440_4533436417393325839_n.jpg');
     background-size: cover;
-    background-color: #ddd; /* เปลี่ยนสีพื้นหลังเป็นสีเทา (#f0f0f0) */
+background-repeat: no-repeat; 
   }
 
  .modal-content {
@@ -134,21 +157,6 @@
   opacity: 0.8;
 }
 
-/* @media (max-width: 768px) {
-  body {
-    padding-top: 50px;
-  }
-
-  .container {
-    padding: 20px;
-  }
-
-  .container input[type="text"],
-  .container input[type="password"] {
-    font-size: 14px;
-  }
-} */
-  
 @media (max-width: 768px) {
   .container {
     padding: 20px;
@@ -191,16 +199,83 @@ label[for="rmb"] {
       font-size: 36px;
       margin-bottom: 20px;
     }
+   .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+    }
+
+    .popup .modal-content {
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 1000px;
+            height: 500px;
+
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .popup p {
+      margin-bottom: 15px;
+    }
+
+    .popup button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      width: 100px;
+      border-radius: 5px;
+    }
+
+    .popup button:hover {
+      opacity: 0.8;
+    }
 </style>
 
 </head>
-<body>
-  <!--<div class="pre-login-page" id="preLoginPage">-->
-  <!--  <div class="pre-login-text">Dust Detector Activity</div>-->
-    <!-- กรอกเนื้อหาที่ต้องการให้แสดงในหน้าก่อนเข้าสู่หน้า Login ตรงนี้ -->
-    <!-- อาจเป็นข้อความ รูปภาพ หรือเนื้อหาอื่นๆ ที่คุณต้องการแสดง -->
-  <!--</div>-->
+<body onload="showFirstPopup()" >
+ 
 
+<!--https://dustdetector.net/video.php-->
+
+
+<div id="firstPopup" class="popup">
+  <div class="modal-content">
+    <h1>What is Dust detector activity</h1>
+    <p>ในปัจจุบันเนื่องจากปัญหาที่เกิดจากผลกระทบของ PM 2.5 มีมากมาย และเทคโนโลยีการตรวจวัดฝุ่นก็มีข้อจำกัดค่อนข้างมาก เช่น เครื่องวัดฝุ่นส่วนใหญ่ติดตั้งถาวร และการดูข้อมูลฝุ่นในเว็บแอปพลิเคชันอื่นๆ จะแสดงผล เฉพาะข้อมูลโดยรวมที่ยากต่อการระบุ จะดีกว่าไหม ถ้ามี Web Application Platform ที่สามารถตรวจสอบค่าได้และเคลื่อนย้ายเครื่องตรวจวัดฝุ่นได้ง่ายกว่า จึงเป็นสาเหตุว่าทำไมจึงต้องการพัฒนา Dust Detector Activity เป็นแพลตฟอร์มตรวจจับฝุ่นที่สามารถตรวจวัดฝุ่นได้ในพื้นที่เฉพาะ เราจคงทำเครื่องตรวจจับฝุ่น อุปกรณ์ IOT แบบพกพา และเว็บแอปพลิเคชันเครื่องตรวจค่าฝุ่น</p>
+    <p>At present, due to problems caused by the impact of PM 2.5 There are a lot of them and the technology for measuring dust has quite some limitations, such as Most dust meters are permanently installed, and looking at dust data in other web applications will show only the overall data, which is difficult to determine, would it be better if there was a web application platform that could check the value and easier to  move the dust measure device around, so that is reason why want to have developed Dust Detector Activity, Dust Detector Activity  is dust detector platform that can measure dust in a specific area, Dust Detector Activity consists of Dust Detector Activity portable mobile IOT device and Dust Detector web application</p>
+    <div style="display: flex; justify-content: space-between; margin-top: 15px;">
+      <button onclick="showSecondPopup()">Next</button>
+      <a href="https://dustdetector.net/video.php" target="_blank">
+        <button style="margin-left: 15px;">Go to Video Demo</button>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Second pop-up -->
+<div id="secondPopup" class="popup">
+  <div class="modal-content">
+<h2>This is the senior project </h2>
+<h3>From SE Camt CMU : Tanachok & Wathunyu </h3>
+<p>ท่านสามารถใช้งานได้โดยทำการสมัคสมาชิกหรือทำการใช้ข้อมูลผู้ใช้เริ่มต้นที่เรามีให้  </p> 
+<p> โดยเราทำไว้3 Role 1 คือ Admin โดยทำการlogin Username:admin Password:admin </p>
+<p>  Role 2 คือ User โดยทำการlogin Username:member Password:member</p>
+<p>  Role 3 คือ Customer โดยทำการlogin Username:customer Password:customer</p>
+<p style=" color:red">  *แต่ใน role ของ Member ท่านจะไม่สามารถเล่นกิจกรรมจากทางWebsite เราได้เนื่องจากท่านผู้เล่นจะต้องมีเครื่อง Device ของเราเพื่อทำภารกิจในแต่ละจุด</p>
+    <button onclick="hidePopups()">Close</button>
+  </div>
+</div>
 <a href="feedback.php" class="popup-trigger" style="bottom: 20px; right: 100px; background-color: #4CAF50; display: flex; align-items: center; justify-content: center;">
   <span style="font-size: 14px; margin: 0; text-align: center;">Feed back</span>
 </a>
@@ -216,9 +291,7 @@ label[for="rmb"] {
         <div id="id01" class="modal">
           <form class="modal-content animate" action="chklogin.php" method="post">
             <div class="imgcontainer">
-              <!-- <span onclick="hideLoginModal()" class="close" title="Close Modal">&times;</span> -->
             </div>
-
             <div class="container">
               <center>
                 <h1 class="center"> Dust Detector Activity</h1>
@@ -245,4 +318,3 @@ label[for="rmb"] {
  
 </body>
 </html>
-
