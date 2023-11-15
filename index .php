@@ -136,7 +136,10 @@ background-repeat: no-repeat;
 .container label {
   color: white;
 }
-
+.container-fluid {
+  max-height: 80vh; /* Set a maximum height for the container */
+  overflow-y: auto; /* Enable vertical scrolling if the content exceeds the height */
+}
 .container .psw a {
   color: #f1f1f1;
 }
@@ -204,26 +207,39 @@ label[for="rmb"] {
       font-size: 36px;
       margin-bottom: 20px;
     }
-   .popup {
+   .popup1 {
       display: none;
       position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 1000;
+      
+          position: relative; /* เพิ่มบรรทัดนี้ */
+
     }
 
-    .popup .modal-content {
-          background-color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 90vw; /* Use relative units for width */
-            padding: 5vw; /* Use relative units for padding */
-            margin: 4vw 0; /* Use relative units for margin */
-            border-radius: 10px;
-    }
+    .popup1 .modal-content1 {
+  position: fixed;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 70vh; /* Set a maximum height for modal-content1 */
+  overflow-y: auto; /* Enable vertical scrolling if the content exceeds the height */
+  width: 90vw;
+  padding: 5vw;
+  margin: 4vw 0;
+  border-radius: 10px;
+}
 
+    @media (max-width: 600px) {
+  .popup1 .modal-content1 {
+    width: 90%;
+    padding: 10px;
+    margin: 20px 0;
+  }
+}
     .popup p {
       margin-bottom: 15px;
     }
@@ -250,8 +266,8 @@ label[for="rmb"] {
 <!--https://dustdetector.net/video.php-->
 
 
-<div id="firstPopup" class="popup">
-  <div class="modal-content">
+<div id="firstPopup" class="popup1">
+  <div class="modal-content1">
     <h1>What is Dust Detector Activity</h1>
     <p>ในปัจจุบันเนื่องจากปัญหาที่เกิดจากผลกระทบของ PM 2.5 มีมากมาย และเทคโนโลยีการตรวจวัดฝุ่นก็มีข้อจำกัดค่อนข้างมาก เช่น เครื่องวัดฝุ่นส่วนใหญ่ติดตั้งถาวร และการดูข้อมูลฝุ่นในเว็บแอปพลิเคชันอื่นๆ จะแสดงผล เฉพาะข้อมูลโดยรวมที่ยากต่อการระบุ จะดีกว่าไหม ถ้ามี Web Application Platform ที่สามารถตรวจสอบค่าได้และเคลื่อนย้ายเครื่องตรวจวัดฝุ่นได้ง่ายกว่า จึงเป็นสาเหตุว่าทำไมจึงต้องการพัฒนา Dust Detector Activity เป็นแพลตฟอร์มตรวจจับฝุ่นที่สามารถตรวจวัดฝุ่นได้ในพื้นที่เฉพาะ เราจคงทำเครื่องตรวจจับฝุ่น อุปกรณ์ IOT แบบพกพา และเว็บแอปพลิเคชันเครื่องตรวจค่าฝุ่น</p>
     <p>At present, due to problems caused by the impact of PM 2.5 There are a lot of them and the technology for measuring dust has quite some limitations, such as Most dust meters are permanently installed, and looking at dust data in other web applications will show only the overall data, which is difficult to determine, would it be better if there was a web application platform that could check the value and easier to  move the dust measure device around, so that is reason why want to have developed Dust Detector Activity, Dust Detector Activity  is dust detector platform that can measure dust in a specific area, Dust Detector Activity consists of Dust Detector Activity portable mobile IOT device and Dust Detector web application</p>
@@ -267,8 +283,8 @@ label[for="rmb"] {
 
 
 <!-- Second pop-up -->
-<div id="secondPopup" class="popup">
-  <div class="modal-content">
+<div id="secondPopup" class="popup1">
+  <div class="modal-content1">
 <h2>This is the senior project </h2>
 <h3>From SE Camt CMU : Tanachok & Wathunyu </h3>
 <p>ท่านสามารถใช้งานได้โดยทำการสมัคสมาชิกหรือทำการใช้ข้อมูลผู้ใช้เริ่มต้นที่เรามีให้  </p> 
@@ -283,11 +299,11 @@ label[for="rmb"] {
 <!--  <span style="font-size: 14px; margin: 0; text-align: center;">Feed back</span>-->
 <!--</a>-->
 
-<div class="container" style="padding-top:100px">
+<!--<div class="container" style="padding-top:100px">-->
   
-</div>
+<!--</div>-->
 
-<div class="container-fluid">
+<div class="container-fluid" style="padding-top:100px">
   <div class="row">
     <div class="col-md-12" style="padding:100px">
       <center>
