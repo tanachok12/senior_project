@@ -240,21 +240,22 @@ label[for="rmb"] {
     margin: 20px 0;
   }
 }
-    .popup p {
+    .popup1 p {
       margin-bottom: 15px;
     }
 
-    .popup button {
+    .popup1 button {
       background-color: #4CAF50;
-      color: white;
-      padding: 10px;
-      border: none;
-      cursor: pointer;
-      width: 100px;
-      border-radius: 5px;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  border-radius: 10px; 
     }
 
-    .popup button:hover {
+    .popup1 button:hover {
       opacity: 0.8;
     }
 </style>
@@ -269,8 +270,8 @@ label[for="rmb"] {
 <div id="firstPopup" class="popup1">
   <div class="modal-content1">
     <h1>What is Dust Detector Activity</h1>
-    <p>ในปัจจุบันเนื่องจากปัญหาที่เกิดจากผลกระทบของ PM 2.5 มีมากมาย และเทคโนโลยีการตรวจวัดฝุ่นก็มีข้อจำกัดค่อนข้างมาก เช่น เครื่องวัดฝุ่นส่วนใหญ่ติดตั้งถาวร และการดูข้อมูลฝุ่นในเว็บแอปพลิเคชันอื่นๆ จะแสดงผล เฉพาะข้อมูลโดยรวมที่ยากต่อการระบุ จะดีกว่าไหม ถ้ามี Web Application Platform ที่สามารถตรวจสอบค่าได้และเคลื่อนย้ายเครื่องตรวจวัดฝุ่นได้ง่ายกว่า จึงเป็นสาเหตุว่าทำไมจึงต้องการพัฒนา Dust Detector Activity เป็นแพลตฟอร์มตรวจจับฝุ่นที่สามารถตรวจวัดฝุ่นได้ในพื้นที่เฉพาะ เราจคงทำเครื่องตรวจจับฝุ่น อุปกรณ์ IOT แบบพกพา และเว็บแอปพลิเคชันเครื่องตรวจค่าฝุ่น</p>
-    <p>At present, due to problems caused by the impact of PM 2.5 There are a lot of them and the technology for measuring dust has quite some limitations, such as Most dust meters are permanently installed, and looking at dust data in other web applications will show only the overall data, which is difficult to determine, would it be better if there was a web application platform that could check the value and easier to  move the dust measure device around, so that is reason why want to have developed Dust Detector Activity, Dust Detector Activity  is dust detector platform that can measure dust in a specific area, Dust Detector Activity consists of Dust Detector Activity portable mobile IOT device and Dust Detector web application</p>
+    <p>ในปัจจุบันเนื่องจากปัญหาที่เกิดจากผลกระทบของ PM 2.5 มีมากมาย และเทคโนโลยีการตรวจวัดฝุ่นก็มีข้อจำกัดค่อนข้างมาก เช่น เครื่องวัดฝุ่นส่วนใหญ่ติดตั้งถาวร และการดูข้อมูลฝุ่นในเว็บแอปพลิเคชันอื่นๆ จะแสดงผล เฉพาะข้อมูลโดยรวมที่ยากต่อการระบุ จะดีกว่าไหม ถ้ามี Web Application Platform ที่สามารถตรวจสอบค่าได้และเคลื่อนย้ายเครื่องตรวจวัดฝุ่นได้ง่ายกว่า จึงเป็นสาเหตุว่าทำไมจึงต้องการพัฒนา Dust Detector Activity เป็นแพลตฟอร์มตรวจจับฝุ่นที่สามารถตรวจวัดฝุ่นได้ในพื้นที่เฉพาะ เราจคงทำเครื่องตรวจจับฝุ่น อุปกรณ์ IOT แบบพกพา และเว็บแอปพลิเคชันเครื่องตรวจค่าฝุ่น.</p>
+    <p>At present, due to problems caused by the impact of PM 2.5 There are a lot of them and the technology for measuring dust has quite some limitations, such as Most dust meters are permanently installed, and looking at dust data in other web applications will show only the overall data, which is difficult to determine, would it be better if there was a web application platform that could check the value and easier to  move the dust measure device around, so that is reason why want to have developed Dust Detector Activity, Dust Detector Activity  is dust detector platform that can measure dust in a specific area, Dust Detector Activity consists of Dust Detector Activity portable mobile IOT device and Dust Detector web application.</p>
     <div style="display: flex; justify-content: space-between; margin-top: 15px;">
       <button onclick="showSecondPopup()">Next</button>
       <a href="video.php">
